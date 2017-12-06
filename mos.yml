@@ -1,0 +1,33 @@
+author: Liviu Nicolescu
+type: lib
+description: Servo library
+version: 1.0
+
+includes:
+  - include
+
+sources:
+  - src
+
+filesystem:
+    
+config_schema:
+  - ["Servo", "o", {title: "Servo settings"}]
+  - ["Servo.pin", "i", {title: "The GPIO pin"}]
+  - ["Servo.tmin", "i", 1000, {title: "Pulse width for 0 degrees in microseconds (default 1000)"}]
+  - ["Servo.tmax", "i", 2000, {title: "Pulse width for 180 degrees in microseconds (default 2000)"}]
+
+libs:
+  - origin: https://github.com/mongoose-os-libs/pwm
+
+cdefs:
+#   Define mos tool version. 
+#   If mos tool 1.17 or newer, or latest, use 117
+#   Use 115 for earlier stable/release versions
+#    SERVO_MOS_VERSION: 117
+
+tags:
+  - c
+  - c++
+
+manifest_version: 2017-05-18
