@@ -6,6 +6,11 @@ Servo* mgos_servo_create()
     return new Servo();
 }
 
+Servo* mgos_servo_create_full(int pin, int tmin, int tmax)
+{
+    return new Servo(pin, tmin, tmax);
+}
+
 void mgos_servo_delete(Servo* pThis)
 {
     delete pThis;

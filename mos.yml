@@ -21,10 +21,6 @@ libs:
   - origin: https://github.com/mongoose-os-libs/pwm
 
 cdefs:
-#   Define mos tool version. 
-#   If mos tool 1.17 or newer, or latest, use 117
-#   Use 115 for earlier stable/release versions
-#    SERVO_MOS_VERSION: 117
 
 tags:
   - c

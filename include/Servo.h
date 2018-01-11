@@ -4,6 +4,7 @@ class Servo
 {
 public:
     Servo();
+    Servo(int pin, int tmin, int tmax);
 
     ~Servo()
     {
@@ -36,9 +37,6 @@ private:
     int _tmin;
     int _tmax;
     
-    //Adjust constant according to mos tool version
-    static float _factor;
-
     static void staticStopPwmTimerCB(void * arg);
 
     template <typename T>
