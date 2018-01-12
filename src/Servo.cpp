@@ -61,5 +61,5 @@ void Servo::staticStopPwmTimerCB(void * arg)
 
 void Servo::stop()
 {
-    mgos_pwm_set(_pin, 50, 0);
+    mgos_pwm_set(_pin, 0, 0);
 }
