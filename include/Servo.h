@@ -32,11 +32,16 @@ public:
      */
     int doAngleWithTimer(int angle, int timer = 750);
 
+    /*
+     * Stops the pwm
+     */
+    void stop();
+
 private:
     int _pin;
     int _tmin;
     int _tmax;
-    
+
     static void staticStopPwmTimerCB(void * arg);
 
     template <typename T>

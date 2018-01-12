@@ -35,3 +35,8 @@ int mgos_servo_doAngleWithTimer(Servo* pThis, int angle, int timer)
 {
     return (nullptr != pThis) ? pThis->doAngleWithTimer(angle, timer) : -1;
 }
+
+void mgos_servo_stop(Servo* pThis)
+{
+    pThis->stop();
+}

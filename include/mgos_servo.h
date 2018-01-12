@@ -52,6 +52,11 @@ int mgos_servo_doAngle(Servo* pThis, int angle);
  */
 int mgos_servo_doAngleWithTimer(Servo* pThis, int angle, int timer);
 
+/*
+ * Stops the pwm
+ */
+void mgos_servo_stop(Servo* pThis);
+
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

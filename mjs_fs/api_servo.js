@@ -6,6 +6,7 @@ let Servo = {
     _do_time_timer: ffi('int mgos_servo_doTimeWithTimer(void*, int, int)'),
     _do_angle: ffi('int mgos_servo_doAngle(void* , int)'),
     _do_angle_timer: ffi('int mgos_servo_doAngleWithTimer(void*, int, int)'),
+    _stop: ffi('void mgos_servo_stop(void*)'),
 
     // ## **`Servo.create()`**
     // Create and return an instance of a Servo object
@@ -81,6 +82,12 @@ let Servo = {
         // Returns onTime if `this.servo` is not null, -1 otherwise
         doAngleWithTimer: function (angle, timer) {
             return Servo._do_angle_timer(this.servo, angle, timer);
+        },
+
+        // ## **`servo.stop()`**
+        // Stops the pwm. Return value: none.
+        stop: function () {
+            Servo._stop(this.servo);
         },
     }
 };
